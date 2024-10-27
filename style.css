@@ -56,6 +56,13 @@ body {
     display: inline-block;
     margin-bottom: 20px;
   }
+
+  .app-img {
+    display:flex;
+    justify-content: space-around;
+    margin: 20px;
+    margin-bottom: 60px;
+  }
   
   /* フッターのスタイル */
   footer {
