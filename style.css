@@ -48,7 +48,7 @@ body {
   
   画像のスタイル
   .app-contents img {
-    margin-right: 20px;
+    /* margin-right: 20px; */
   }
   
   /* ボタンのスタイル */
@@ -60,8 +60,8 @@ body {
   .app-img {
     display:flex;
     justify-content: space-around;
-    margin: 20px;
-    margin-bottom: 60px;
+    padding: 50px;
+    margin-bottom: 30px;
   }
   
   /* フッターのスタイル */
