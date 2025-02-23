@@ -69,6 +69,62 @@ body {
     margin-top: 50px;
 }
 
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 50px; */
+    color: white;
+    /* background-color: #fff; */
+    /* border: 2px solid #ccc;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+}
+
+.form-group {
+    /* margin-bottom: 20px; */
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+}
+
+.form-input {
+    /* width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px; */
+    width: 100%;
+padding: 15px;
+border: 1px solid #ddd;
+border-radius: 8px;
+margin-bottom: 15px;
+font-family: 'Georgia', serif;
+font-size: 16px;
+}
+
+.form-input:focus {
+    border-color: #6A5ACD;
+    /* border-color: #999; */
+box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.form-button {
+  background-color: #6A5ACD;
+  color: #FFFFFF;
+  font-family: 'Times New Roman', serif;
+  font-size: 18px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 2px solid #483D8B;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #483D8B;
+}
+
 .inquiry-btn {
   display: block;
   width: 150px;

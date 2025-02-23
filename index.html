@@ -28,12 +28,36 @@
                 style="width: 250px; height: auto; overflow: hidden; display: inline-block; vertical-align: middle;">
         </a>
     </div>
-    <div class="page-header">
+    <div class="form-wrapper">
+        <form
+            action="https://script.google.com/macros/s/AKfycbzMGPa6Y4ZFOw7SgXmygS4UO4NcDBiPRE_YeDLsUTR3m23XjwYdAzdMboin_iTtITwE/exec"
+            method="POST">
+            <h2>お問い合わせ</h2>
+            <p>お問い合わせ内容をご記入の上送信ボタンを押してください。</p>
+            <div class="form-group">
+                <label for="name">お名前:</label>
+                <input class="form-input" type="text" id="name" name="name" placeholder="例）山田 太郎" required>
+            </div>
+            <div class="form-group">
+                <label for="email">メールアドレス:</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="例）abcd@xyz.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">お問い合わせ内容:</label>
+                <textarea class="form-input" id="message" name="message" rows="5" placeholder="お問い合わせ内容をこちらにご記入ください"
+                    required></textarea>
+            </div>
+            <div class="form-group">
+                <button class="form-button" type="submit">送信</button>
+            </div>
+        </form>
+    </div>
+    <!-- <div class="page-header">
         <ul class="main-nav">
             <li class="inquiry-btn"><a
                     href="https://form.run/embed/@hiroyuki--dHG8DY5gFfzDI7o4X0fP?embed=direct">お問い合わせ</a></li>
         </ul>
-    </div>
+    </div> -->
     <footer>
         <div class="wrapper">
             <small>
