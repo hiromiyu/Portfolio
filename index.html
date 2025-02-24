@@ -56,7 +56,7 @@
     <div id="loading">
         <div class="loader"></div>
     </div>
-    <p id="responseMessage" style="display:none; font-weight:bold;"></p>
+    <!-- <p id="responseMessage" style="display:none; font-weight:bold;"></p> -->
 
     <script>
         document.getElementById("contactForm").addEventListener("submit", async function (event) {
@@ -67,7 +67,7 @@
             const loading = document.getElementById("loading");
 
             try {
-                loading.style.display = "block"; // ローディング表示
+                loading.style.display = "flex"; // ローディング表示
 
                 const response = await fetch("https://instead.onrender.com/contact", {
                     method: "POST",
