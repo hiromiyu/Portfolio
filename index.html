@@ -70,19 +70,29 @@
                 });
 
                 const result = await response.json();
-                if (result.success) {
-                    responseMessage.style.color = "green";
-                    responseMessage.textContent = "お問い合わせありがとうございます！";
+
+                if (response.ok && result.success) {
+                    alert("お問い合わせが送信されました！");
                 } else {
-                    responseMessage.style.color = "red";
-                    responseMessage.textContent = "送信に失敗しました。";
+                    throw new Error(result.message || "エラーが発生しました。");
                 }
+
+                // if (result.success) {
+                //     responseMessage.style.color = "green";
+                //     responseMessage.textContent = "お問い合わせありがとうございます！";
+                // } else {
+                //     responseMessage.style.color = "red";
+                //     responseMessage.textContent = "送信に失敗しました。";
+                // }
             } catch (error) {
-                responseMessage.style.color = "red";
-                responseMessage.textContent = "エラーが発生しました。もう一度お試しください。";
+
+                console.error(error);
+                alert(error.message);
+                // responseMessage.style.color = "red";
+                // responseMessage.textContent = "エラーが発生しました。もう一度お試しください。";
             }
 
-            responseMessage.style.display = "block"; // メッセージを表示
+            // responseMessage.style.display = "block"; // メッセージを表示
         });
     </script>
 
