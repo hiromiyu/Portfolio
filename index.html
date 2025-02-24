@@ -29,7 +29,8 @@
         </a>
     </div>
     <div class="form-wrapper">
-        <form action="https://instead.onrender.com/contact" method="POST">
+        <!-- <form id="contactForm" action="https://instead.onrender.com/contact" method="POST"> -->
+        <form id="contactForm">
             <h2>お問い合わせ</h2>
             <p>お問い合わせ内容をご記入の上送信ボタンを押してください。</p>
             <div class="form-group">
@@ -50,6 +51,42 @@
             </div>
         </form>
     </div>
+
+    <!-- メッセージ表示エリア -->
+    <p id="responseMessage" style="display:none; font-weight:bold;"></p>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", async function (event) {
+            event.preventDefault(); // デフォルトのフォーム送信を防ぐ（URLが変わるのを防止）
+
+            const formData = new FormData(this);
+            const responseMessage = document.getElementById("responseMessage");
+
+            try {
+                const response = await fetch("https://instead.onrender.com/contact", {
+                    method: "POST",
+                    body: new URLSearchParams(formData), // `application/x-www-form-urlencoded` 形式で送信
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" }
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    responseMessage.style.color = "green";
+                    responseMessage.textContent = "お問い合わせありがとうございます！";
+                } else {
+                    responseMessage.style.color = "red";
+                    responseMessage.textContent = "送信に失敗しました。";
+                }
+            } catch (error) {
+                responseMessage.style.color = "red";
+                responseMessage.textContent = "エラーが発生しました。もう一度お試しください。";
+            }
+
+            responseMessage.style.display = "block"; // メッセージを表示
+        });
+    </script>
+
+
     <!-- <div class="page-header">
         <ul class="main-nav">
             <li class="inquiry-btn"><a
