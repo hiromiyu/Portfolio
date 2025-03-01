@@ -3,8 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="web,iosアプリ制作が出来ます。ios日記アプリDAYCEを開発したのでインストールしてみて下さい。気軽にお問い合わせ下さい。">
+    <link rel="apple-touch-icon" href="favicon.ico" />
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="style.css" />
     <title>ひろのサイト</title>
 </head>
@@ -25,7 +28,7 @@
         <a
             href="https://apps.apple.com/us/app/dayce/id6444592652?itscg=30200&itsct=apps_box_badge&mttnsubad=6444592652">
             <img src="IMG_3796.WEBP" alt="DAYCEアプリのスクリーンショット"
-                style="width: 250px; height: auto; overflow: hidden; display: inline-block; vertical-align: middle;">
+                style="width: 100%; max-width: 500px; height: auto; overflow: hidden; display: inline-block; ">
         </a>
     </div>
     <div class="form-wrapper">
@@ -56,8 +59,6 @@
     <div id="loading">
         <div class="loader"></div>
     </div>
-    <!-- <p id="responseMessage" style="display:none; font-weight:bold;"></p> -->
-
     <script>
         document.getElementById("contactForm").addEventListener("submit", async function (event) {
             event.preventDefault(); // デフォルトのフォーム送信を防ぐ（URLが変わるのを防止）
@@ -82,25 +83,14 @@
                 } else {
                     throw new Error(result.message || "エラーが発生しました。");
                 }
-
-                // if (result.success) {
-                //     responseMessage.style.color = "green";
-                //     responseMessage.textContent = "お問い合わせありがとうございます！";
-                // } else {
-                //     responseMessage.style.color = "red";
-                //     responseMessage.textContent = "送信に失敗しました。";
-                // }
             } catch (error) {
 
                 console.error(error);
                 alert(error.message);
-                // responseMessage.style.color = "red";
-                // responseMessage.textContent = "エラーが発生しました。もう一度お試しください。";
             } finally {
                 loading.style.display = "none"; // ローディング非表示
             }
 
-            // responseMessage.style.display = "block"; // メッセージを表示
         });
     </script>
 

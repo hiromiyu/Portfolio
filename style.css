@@ -36,14 +36,14 @@ body {
   
   .app-contents a {
     display: inline-block;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
 
   .app-img {
     display:flex;
     justify-content: space-around;
     padding: 50px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
   
   footer {
@@ -116,7 +116,7 @@ box-shadow: 0 0 5px rgba(0,0,0,0.1);
   font-family: 'Times New Roman', serif;
   font-size: 18px;
   padding: 10px 30px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 2px solid #483D8B;
   transition: background-color 0.3s ease;
 }
