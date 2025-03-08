@@ -19,15 +19,37 @@ body {
   .home-content {
     padding: 50px 20px;
     text-align: center;
-    color: white;
+    color: gray;
   }
   
   .page-title {
     margin: 0;
     font-size: 3em;
     font-family: 'Philosopher', serif;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: normal;
+  }
+
+  .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 30px; /* カードの間隔 */
+    padding: 20px;
+    scroll-behavior: smooth; /* スムーズスクロール */
+    -webkit-overflow-scrolling: touch; /* iOSのスクロールを滑らかに */
+  }
+  
+  .scroll-item {
+    flex: 0 0 90%; /* カードの幅 (90%にするとほぼ画面いっぱい) */
+    max-width: 400px; /* PCでの見栄え調整 */
+    height: 250px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    scroll-snap-align: center;
   }
   
   画像のスタイル
@@ -36,14 +58,12 @@ body {
   
   .app-contents a {
     display: inline-block;
-    /* margin-bottom: 20px; */
   }
 
   .app-img {
     display:flex;
     justify-content: space-around;
     padding: 50px;
-    /* margin-bottom: 30px; */
   }
   
   footer {
@@ -72,17 +92,11 @@ body {
 .form-wrapper {
     display: flex;
     justify-content: center;
-    /* margin-top: 50px; */
     color: white;
-    /* background-color: #fff; */
-    /* border: 2px solid #ccc; */
     padding: 20px;
-    /* border-radius: 15px; */
-    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
 }
 
 .form-group {
-    /* margin-bottom: 20px; */
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
@@ -90,24 +104,18 @@ body {
 }
 
 .form-input {
-    /* width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px; */
     width: 100%;
-padding: 15px;
-border: 1px solid #ddd;
-border-radius: 8px;
-margin-bottom: 15px;
-font-family: 'Georgia', serif;
-font-size: 16px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
 }
 
 .form-input:focus {
     border-color: #6A5ACD;
-    /* border-color: #999; */
-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 .form-button {
@@ -134,7 +142,6 @@ box-shadow: 0 0 5px rgba(0,0,0,0.1);
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  /* display: flex; */
   align-items: center;
   justify-content: center;
   z-index: 9999;
