@@ -79,8 +79,6 @@
             params.append("cfToken", token || "");
             params.append("loadedAt", loadedAt);
 
-            console.log("token:", token);
-
             try {
                 loading.style.display = "flex"; // ローディング表示
                 button.disabled = true;
@@ -92,8 +90,6 @@
                 });
 
                 const result = await response.json();
-
-                console.log(result);
 
                 if (response.ok && result.success) {
                     alert("お問い合わせが送信されました！");
