@@ -67,7 +67,7 @@
             const loadedAt = window.loadedAt;
 
             // 👇 追加②：Turnstileトークン取得
-            const token = document.querySelector('[name="cf-turnstile-response"]')?.value;
+            const token = document.querySelector('[name="cf-turnstile-response"]').value;
 
             if (!token) {
                 alert("認証を完了してください");
@@ -78,6 +78,8 @@
             const params = new URLSearchParams(formData);
             params.append("cfToken", token || "");
             params.append("loadedAt", loadedAt);
+
+            console.log("token:", token);
 
             try {
                 loading.style.display = "flex"; // ローディング表示
@@ -90,6 +92,8 @@
                 });
 
                 const result = await response.json();
+
+                console.log(result);
 
                 if (response.ok && result.success) {
                     alert("お問い合わせが送信されました！");
