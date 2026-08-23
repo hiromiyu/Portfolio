@@ -414,7 +414,8 @@ code {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 /* .form-wrapper {
@@ -723,9 +724,9 @@ footer small {
     } */
 
 
-    .form-wrapper {
+    /* .form-wrapper {
         width: min(100% - 30px, 700px);
-    }
+    } */
 
 }
 ```
